@@ -1,19 +1,28 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Feather icons init
-  feather.replace();
+  document.addEventListener("DOMContentLoaded", function () {
+    const openBtn = document.getElementById("menu-toggle");
+    const closeBtn = document.getElementById("menu-close");
+    const menu = document.getElementById("mobile-menu");
 
-  const openBtn = document.getElementById("menu-toggle");
-  const closeBtn = document.getElementById("menu-close");
-  const menu = document.getElementById("mobile-menu");
+    // Open drawer
+    openBtn.addEventListener("click", () => {
+      menu.classList.remove("-translate-x-full");
+    });
 
-  openBtn.addEventListener("click", () => {
-    menu.classList.remove("-translate-x-full");
+    // Close drawer with close button
+    closeBtn.addEventListener("click", () => {
+      menu.classList.add("-translate-x-full");
+    });
+
+    // Close drawer when clicking outside
+    document.addEventListener("click", (event) => {
+      const isClickInsideMenu = menu.contains(event.target);
+      const isClickOnToggle = openBtn.contains(event.target);
+
+      if (!isClickInsideMenu && !isClickOnToggle) {
+        menu.classList.add("-translate-x-full");
+      }
+    });
   });
-
-  closeBtn.addEventListener("click", () => {
-    menu.classList.add("-translate-x-full");
-  });
-});
 
 // drawers menu
 
