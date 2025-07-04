@@ -94,114 +94,133 @@
   </head>
 
   <body class="font-sans text-gray-800">
-    <!-- Header with Hamburger & Logo (All Screens) -->
-    <header class="flex items-center justify-between px-4 py-3 bg-white shadow-md z-50 relative">
-      <!-- Hamburger Button -->
-      <button id="menu-toggle" class="text-gray-700">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
+   <!-- Header with Logo on Left and Hamburger on Right -->
+<header class="flex items-center justify-between px-4 pt-10 pb-4 bg-white shadow-md z-50 relative">
+  <!-- Logo (Left) -->
+  <div>
+    <img
+      src="https://neetajewellers.in/wp-content/uploads/2024/03/cropped-jewelexe-logo-black.png"
+      alt="Logo"
+      class="h-16"
+    />
+  </div>
 
-      <!-- Center Logo -->
-      <div class="absolute left-1/2 transform -translate-x-1/2">
-        <img src="https://suvarnasetu.com/svrnstuapi/storage/app/public/40/website/website_header_logo_067911600.png"
-             alt="Logo" class="h-8" />
-      </div>
-    </header>
+  <!-- Hamburger Button (Right) -->
+  <button id="menu-toggle" class="text-gray-700 ml-auto">
+    <svg
+      class="w-10 h-10 "
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
+</header>
+
 
     <!-- Drawer Menu: Slides in from the left -->
-    <div id="mobile-menu"
-         class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50 overflow-y-auto">
+    <div
+      id="mobile-menu"
+      class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50 overflow-y-auto"
+    >
       <div class="p-4">
         <!-- Close Button -->
         <div class="flex justify-between items-center mb-4">
           <h2 class="text-lg font-bold">Menu</h2>
           <button id="menu-close" class="text-gray-700">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-                 viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
               <path d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
 
-    <!-- Line-by-line menu -->
-<div class="space-y-2">
-  <div
-    class="feature block bg-gray-100 px-4 py-3 rounded-md hover:bg-gray-200 cursor-pointer"
-    onclick="navigateToScheme()"
-  >
-    Scheme
-  </div>
-  <div
-    class="feature block bg-gray-100 px-4 py-3 rounded-md hover:bg-gray-200 cursor-pointer"
-    onclick="navigateToBankDetails()"
-  >
-    Bank
-  </div>
-  <div
-    class="feature block bg-gray-100 px-4 py-3 rounded-md hover:bg-gray-200 cursor-pointer"
-    onclick="navigateToKyc()"
-  >
-    KYC
-  </div>
-  <div
-    class="feature block bg-gray-100 px-4 py-3 rounded-md hover:bg-gray-200 cursor-pointer"
-    onclick="navigateToRate()"
-  >
-    Rate
-  </div>
-  <div
-    class="feature block bg-gray-100 px-4 py-3 rounded-md hover:bg-gray-200 cursor-pointer"
-    onclick="navigateSchemeRecords()"
-  >
-    Records
-  </div>
-  <div
-    class="feature block bg-gray-100 px-4 py-3 rounded-md hover:bg-gray-200 cursor-pointer"
-    onclick="navigateToCustomerCard()"
-  >
-    Card
-  </div>
-  <div
-    class="feature block bg-gray-100 px-4 py-3 rounded-md hover:bg-gray-200 cursor-pointer"
-    onclick="navigateTransactionHistory()"
-  >
-    History
-  </div>
-  <div
-    class="feature block bg-gray-100 px-4 py-3 rounded-md hover:bg-gray-200 cursor-pointer"
-    onclick="navigateToMyOrder()"
-  >
-    Order
-  </div>
-  <div
-    class="feature block bg-gray-100 px-4 py-3 rounded-md hover:bg-gray-200 cursor-pointer"
-    onclick="navigateToUserProfile()"
-  >
-    Profile
-  </div>
-  <div
-    class="feature block bg-gray-100 px-4 py-3 rounded-md hover:bg-gray-200 cursor-pointer"
-    onclick="navigateToDigitalGold()"
-  >
-    Gold
-  </div>
-  <div
-    class="feature block bg-gray-100 px-4 py-3 rounded-md hover:bg-gray-200 cursor-pointer"
-    onclick="navigateToPanchang()"
-  >
-    Panchang
-  </div>
-  <div
-    class="feature block bg-gray-100 px-4 py-3 rounded-md hover:bg-gray-200 cursor-pointer"
-    onclick="navigateToSetting()"
-  >
-    Settings
-  </div>
-</div>
-
+        <!-- Line-by-line menu -->
+        <div class="space-y-2">
+          <div
+            class="feature block bg-gray-100 px-4 py-3 rounded-md hover:bg-gray-200 cursor-pointer"
+            onclick="navigateToScheme()"
+          >
+            Scheme
+          </div>
+          <div
+            class="feature block bg-gray-100 px-4 py-3 rounded-md hover:bg-gray-200 cursor-pointer"
+            onclick="navigateToBankDetails()"
+          >
+            Bank
+          </div>
+          <div
+            class="feature block bg-gray-100 px-4 py-3 rounded-md hover:bg-gray-200 cursor-pointer"
+            onclick="navigateToKyc()"
+          >
+            KYC
+          </div>
+          <div
+            class="feature block bg-gray-100 px-4 py-3 rounded-md hover:bg-gray-200 cursor-pointer"
+            onclick="navigateToRate()"
+          >
+            Rate
+          </div>
+          <div
+            class="feature block bg-gray-100 px-4 py-3 rounded-md hover:bg-gray-200 cursor-pointer"
+            onclick="navigateSchemeRecords()"
+          >
+            Records
+          </div>
+          <div
+            class="feature block bg-gray-100 px-4 py-3 rounded-md hover:bg-gray-200 cursor-pointer"
+            onclick="navigateToCustomerCard()"
+          >
+            Card
+          </div>
+          <div
+            class="feature block bg-gray-100 px-4 py-3 rounded-md hover:bg-gray-200 cursor-pointer"
+            onclick="navigateTransactionHistory()"
+          >
+            History
+          </div>
+          <div
+            class="feature block bg-gray-100 px-4 py-3 rounded-md hover:bg-gray-200 cursor-pointer"
+            onclick="navigateToMyOrder()"
+          >
+            Order
+          </div>
+          <div
+            class="feature block bg-gray-100 px-4 py-3 rounded-md hover:bg-gray-200 cursor-pointer"
+            onclick="navigateToUserProfile()"
+          >
+            Profile
+          </div>
+          <div
+            class="feature block bg-gray-100 px-4 py-3 rounded-md hover:bg-gray-200 cursor-pointer"
+            onclick="navigateToDigitalGold()"
+          >
+            Gold
+          </div>
+          <div
+            class="feature block bg-gray-100 px-4 py-3 rounded-md hover:bg-gray-200 cursor-pointer"
+            onclick="navigateToPanchang()"
+          >
+            Panchang
+          </div>
+          <div
+            class="feature block bg-gray-100 px-4 py-3 rounded-md hover:bg-gray-200 cursor-pointer"
+            onclick="navigateToSetting()"
+          >
+            Settings
+          </div>
+        </div>
       </div>
     </div>
     <!--  Search Input with Icon -->
@@ -228,14 +247,12 @@
       />
     </div>
 
-  <!-- Carousel Section -->
+    <!-- Carousel Section -->
     <div class="relative w-full">
       <div class="swiper" id="headerSwiper">
         <div class="swiper-wrapper">
           <!-- Slide 1 -->
-          <div
-            class="swiper-slide flex items-center justify-center"
-          >
+          <div class="swiper-slide flex items-center justify-center">
             <img
               src="assests/banner_008139000.jpg"
               class="w-full h-full object-contain"
@@ -244,9 +261,7 @@
           </div>
 
           <!-- Slide 2 -->
-          <div
-            class="swiper-slide flex items-center justify-center "
-          >
+          <div class="swiper-slide flex items-center justify-center">
             <img
               src="assests/banner_008202900.jpg"
               class="w-full h-full object-contain"
@@ -255,9 +270,7 @@
           </div>
 
           <!-- Slide 3 -->
-          <div
-            class="swiper-slide flex items-center justify-center"
-          >
+          <div class="swiper-slide flex items-center justify-center">
             <img
               src="assests/banner_027373400.jpg"
               class="w-full h-full object-contain"
@@ -1026,60 +1039,104 @@
       </div>
     </div>
 
-<!-- Footer -->
-<footer class="bg-pink-100 text-gray-800 py-5 md:py-10">
-  <div class="container mx-auto px-4">
-    <div class="flex flex-col lg:flex-row lg:justify-center gap-8">
-      
-      <!-- Logo & Contact -->
-      <div class="">
-        <img src="https://suvarnasetu.com/svrnstuapi/storage/app/public/40/website/website_footer_logo_051253300.png" alt="Logo" class="w-auto h-12 mb-4">
-        <div class="space-y-3 text-sm">
-          <div class="flex items-start gap-2">
-            <i class="fas fa-map-marker-alt mt-1"></i>
-            <p class="text-base font-montserrat tracking-wide">
-              Purani Bazar, Sona Patti,<br>
-              Muzaffarpur, Bihar - 842001
-            </p>
-          </div>
-          <div class="flex items-start gap-2">
-            <i class="fas fa-phone-alt mt-1"></i>
-            <div>
-              <h6 class="text-base font-montserrat tracking-wide">Contact Us</h6>
-              <a href="tel:8797859201" class="block hover:underline text-base font-montserrat tracking-wide">8797859201</a>
+    <!-- Footer -->
+    <footer class="bg-pink-100 text-gray-800 py-5 md:py-10">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row lg:justify-center gap-8">
+          <!-- Logo & Contact -->
+          <div class="">
+            <img
+              src="https://suvarnasetu.com/svrnstuapi/storage/app/public/40/website/website_footer_logo_051253300.png"
+              alt="Logo"
+              class="w-auto h-12 mb-4"
+            />
+            <div class="space-y-3 text-sm">
+              <div class="flex items-start gap-2">
+                <i class="fas fa-map-marker-alt mt-1"></i>
+                <p class="text-base font-montserrat tracking-wide">
+                  Purani Bazar, Sona Patti,<br />
+                  Muzaffarpur, Bihar - 842001
+                </p>
+              </div>
+              <div class="flex items-start gap-2">
+                <i class="fas fa-phone-alt mt-1"></i>
+                <div>
+                  <h6 class="text-base font-montserrat tracking-wide">
+                    Contact Us
+                  </h6>
+                  <a
+                    href="tel:8797859201"
+                    class="block hover:underline text-base font-montserrat tracking-wide"
+                    >8797859201</a
+                  >
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fas fa-street-view text-xl"></i>
+                <a
+                  href="/store-locator"
+                  class="hover:underline text-base font-montserrat tracking-wide"
+                  >Store Locator</a
+                >
+              </div>
+              <div class="flex gap-3 mt-3 text-lg">
+                <a
+                  href="https://wa.me/+918797859201"
+                  target="_blank"
+                  class="text-green-600 hover:text-green-700"
+                >
+                  <i
+                    class="fab fa-whatsapp bg-green-400 px-3 py-2 rounded-full text-white text-xl"
+                  ></i>
+                </a>
+                <a
+                  href="https://www.facebook.com/gopikishanjewellers"
+                  target="_blank"
+                  class="text-blue-600 hover:text-blue-700"
+                >
+                  <i
+                    class="fab fa-facebook-f bg-blue-400 px-4 py-2 rounded-full text-white text-xl"
+                  ></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/gopikishan.jewellers/"
+                  target="_blank"
+                  class="text-pink-500 hover:text-pink-600"
+                >
+                  <i
+                    class="fab fa-instagram bg-gradient-to-r from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] px-3 py-2 rounded-full text-white text-xl"
+                  ></i>
+                </a>
+                <a
+                  href="https://www.youtube.com/channel/UCETd0begka6vdyhNdmyLKdw"
+                  target="_blank"
+                  class="text-red-600 hover:text-red-700"
+                >
+                  <i
+                    class="fab fa-youtube bg-red-800 px-3 py-2 rounded-full text-white text-xl"
+                  ></i>
+                </a>
+                <a
+                  href="https://twitter.com/gopikishanjew"
+                  target="_blank"
+                  class="text-blue-400 hover:text-blue-500 bg-black px-3 py-2 rounded-full text-white text-xl"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    class="w-5 h-7 fill-current"
+                  >
+                    <path
+                      d="m18.9,1.153h3.682l-8.042,9.189,9.46,12.506h-7.405l-5.804-7.583-6.634,7.583H.469l8.6-9.831L0,1.153h7.593l5.241,6.931,6.065-6.931Zm-1.293,19.494h2.039L6.482,3.239h-2.19l13.314,17.408Z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="flex items-center gap-2">
-            <i class="fas fa-street-view text-xl"></i>
-            <a href="/store-locator" class="hover:underline text-base font-montserrat tracking-wide">Store Locator</a>
-          </div>
-          <div class="flex gap-3 mt-3 text-lg">
-            <a href="https://wa.me/+918797859201" target="_blank" class="text-green-600 hover:text-green-700">
-              <i class="fab fa-whatsapp bg-green-400 px-3 py-2 rounded-full text-white text-xl"></i>
-            </a>
-            <a href="https://www.facebook.com/gopikishanjewellers" target="_blank" class="text-blue-600 hover:text-blue-700">
-              <i class="fab fa-facebook-f bg-blue-400 px-4 py-2 rounded-full text-white text-xl"></i>
-            </a>
-            <a href="https://www.instagram.com/gopikishan.jewellers/" target="_blank" class="text-pink-500 hover:text-pink-600">
-              <i class="fab fa-instagram bg-gradient-to-r from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] px-3 py-2 rounded-full text-white text-xl"></i>
-            </a>
-            <a href="https://www.youtube.com/channel/UCETd0begka6vdyhNdmyLKdw" target="_blank" class="text-red-600 hover:text-red-700">
-              <i class="fab fa-youtube bg-red-800 px-3 py-2 rounded-full text-white text-xl"></i>
-            </a>
-            <a href="https://twitter.com/gopikishanjew" target="_blank" class="text-blue-400 hover:text-blue-500 bg-black px-3 py-2 rounded-full text-white text-xl">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-7 fill-current">
-                <path d="m18.9,1.153h3.682l-8.042,9.189,9.46,12.506h-7.405l-5.804-7.583-6.634,7.583H.469l8.6-9.831L0,1.153h7.593l5.241,6.931,6.065-6.931Zm-1.293,19.494h2.039L6.482,3.239h-2.19l13.314,17.408Z"></path>
-              </svg>
-            </a>
           </div>
         </div>
       </div>
-
-    </div>
-   
-  </div>
-</footer>
-
+    </footer>
 
     <!-- JS Libraries & Script -->
     <script src="https://unpkg.com/feather-icons"></script>
